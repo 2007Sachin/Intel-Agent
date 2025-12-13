@@ -277,6 +277,7 @@ function App() {
       if (data && data.length > 0) {
         const normalized = data.map(item => ({
           ...item,
+          summary: item.update_summary,
           sentiment_score: item.sentiment_score ?? 0
         }))
         setUpdates(normalized)
